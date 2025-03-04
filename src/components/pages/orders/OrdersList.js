@@ -5,11 +5,12 @@ import OrderToday from "./OrderToday";
 import OrdersListTable from "./OrdersListTable";
 function OrdersList() {
   return (
-    <>
-      <div
-        style={{
-          margin: "40px 0px",
-        }}
+    <div style={{
+      width: '80%',
+    }}> 
+      <div style={{
+              marginBottom: '40px'
+      }}
       >
         <div
           style={{
@@ -35,7 +36,7 @@ function OrdersList() {
         </div>
       </div>
       <OrdersListTable/>
-    </>
+    </div>
   );
 }
 

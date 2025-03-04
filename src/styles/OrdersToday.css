@@ -1,19 +1,18 @@
 .today {
-     display: flex;
-     align-items: center;
-     gap: 10px;
-     background-color: #ffffff;
-     border-radius: 12px;
-     padding: 0px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 0px 16px;
 }
 
 .today-select {
-     border: none;
-     width: 140px;
-     padding: 22px;
-     color: #3e4954;
-     font-weight: 600;
-     font-size: 16px;
-     line-height: 19.2px;
-   }
-   
+  border: none;
+  width: 140px;
+  padding: 22px;
+  color: #3e4954;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.2px;
+}

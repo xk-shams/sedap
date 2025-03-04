@@ -5,12 +5,24 @@
 }
 
 .container {
-  max-width: 1468px;
+  max-width: 1920px;
   width: 100%;
   margin: 0 auto;
 }
 
 body {
      background-color: #F3F2F7;
+}
+
+
+.flexing {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+  margin-top: 60px;
 }
 

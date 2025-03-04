@@ -1,8 +1,6 @@
 import Head from "next/head";
-import OrdersList from "@/components/pages/orders/OrdersList";
-import Sidebar from "@/components/common/SideBar";
 
-export default function Orders() {
+export default function Wallet() {
   return (
     <>
       <Head>
@@ -13,7 +11,7 @@ export default function Orders() {
       </Head>
       <div className="container">
         <div className="flexing">
-          <OrdersList/>
+          <h1>Wallet</h1>
         </div>
       </div>
     </>
