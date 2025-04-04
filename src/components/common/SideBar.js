@@ -1,112 +1,88 @@
-import { useState } from "react";
-import "@/styles/SideBar.module.css";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
+import styles from "@/styles/SideBar.module.css";
 
-function Sidebar(props) {
+const userData = [
+  {
+    id: 1,
+    name: "Dashboard",
+    link: "/",
+    image: "/dashboardIcon.png",
+  },
+  {
+    id: 2,
+    name: "Order List",
+    link: "/orders",
+    image: "/icon4.png",
+  },
+  {
+    id: 3,
+    name: "Order Detail",
+    link: "/wallet",
+    image: "/icon2.png",
+  },
+];
+
+function Sidebar() {
+  const pathname = usePathname();
+
   return (
-    <div>
+    <div className={styles.sidebarContainer}>
       <Image
-        className="side-bar-logo"
+        className={styles.sideBarLogo}
         src="/sedap-logo.png"
         width={171}
         height={50}
         alt="logo"
       />
-      <p className="side-bar-p">Modern Admin Dashboard</p>
-      <ul className="side-bar-ul">
-        <li className="side-bar-li">
-          <Link href="/orders" className="menu-link" passHref>
-            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-            Dashboard
-          </Link>
-        </li>
-        <li className="side-bar-li">
-          <Link href="/" className="menu-link">
-            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-            Order Detail
-          </Link>
-        </li>
-        <li className="side-bar-li">
-          <Link href="wallet" className="menu-link">
-            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-            Customer
-          </Link>
-        </li>
-        <li className="side-bar-li">
-          <Link href="#" className="menu-link">
-            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-            Analytics
-          </Link>
-        </li>
-        <li className="side-bar-li">
-          <Link href="#" className="menu-link">
-            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-            Reviews
-          </Link>
-        </li>
-        <li className="side-bar-li">
-          <Link href="#" className="menu-link">
-            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-            Foods
-          </Link>
-        </li>
-        <li className="side-bar-li">
-          <Link href="/orders" className="menu-link">
-            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-            Food Detail
-          </Link>
-        </li>
-        <li className="side-bar-li">
-          <Link href="#" className="menu-link">
-            <Image src="/dashboardIcon.png" width={20} height={20} alt="gg" />
-            Customer Detail
-          </Link>
-        </li>
-        <li className="side-bar-li">
-          <Link href="#" className="menu-link">
-            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-            Calendar
-          </Link>
-        </li>
-        <li className="side-bar-li">
-          <Link href="#" className="menu-link">
-            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-            Chat
-          </Link>
-        </li>
-        <li className="side-bar-li">
-          <Link href="#" className="menu-link">
-            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-            Wallet
-          </Link>
-        </li>
+      <p className={styles.sideBarP}>Modern Admin Dashboard</p>
+
+      <ul className={styles.sideBarUl}>
+        {userData.map((user) => {
+          const isActive = pathname === user.link;
+
+          return (
+            <li key={user.id} className={styles.user}>
+              <Link href={user.link} passHref legacyBehavior>
+                <a
+                  className={`${styles.menuLink} ${
+                    isActive ? styles.activeLink : ""
+                  }`}
+                >
+                  <Image src={user.image} width={20} height={20} alt="icon" />
+                  {user.name}
+                </a>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
 
-      <div className="side-add">
+      <div className={styles.sideAdd}>
         <div>
           <p>
             Please, organize your
             <br />
             menus through button
             <br />
-            bellow!
+            below!
           </p>
-          <button className="side-btn">+Add Menus</button>
+          <button className={styles.sideBtn}>+ Add Menus</button>
         </div>
         <Image
           src="/illustration.png"
           width={76.59}
           height={90.83}
-          alt="shef"
+          alt="chef"
         />
       </div>
+
       <div>
-        <p className="side-text">
+        <p className={styles.sideText}>
           Sedap Restaurant Admin Dashboard <br />© 2020 All Rights Reserved
         </p>
-        <span className="side-text2">Made with ♥ by Peterdraw</span>
+        <span className={styles.sideText2}>Made with ♥ by Peterdraw</span>
       </div>
     </div>
   );

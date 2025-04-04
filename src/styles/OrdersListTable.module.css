@@ -2,11 +2,7 @@
   width: 100%;
   border-collapse: collapse;
 }
-.th,
-.td {
-  padding: 24px;
-  text-align: left;
-}
+
 .th {
   background-color: #f2f2f2;
 }
@@ -17,6 +13,8 @@
 .first {
   background-color: #00b074;
   color: white;
+  padding: 24px;
+  text-align: left;
 }
 .first1 {
   background-color: #00b074;
@@ -40,6 +38,9 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 21.6px;
+  background-color: #f2f2f2;
+  padding: 24px;
+  text-align: left;
 }
 
 .bodyThOrder {
