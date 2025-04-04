@@ -5,9 +5,9 @@ function OrderStatus(props) {
   const { option } = props;
 
   return (
-    <div className="status">
+    <div className={styles.status}>
       <Image src="/status.png" width={24} height={24} alt="gg" />
-      <select className="status-select">
+      <select className={styles.statusSelect}>
         <option
           style={{
             display: "flex",
@@ -17,7 +17,7 @@ function OrderStatus(props) {
         >
           {option}
         </option>
-        <option className="option"></option>
+        <option className={styles.option}></option>
       </select>
     </div>
   );
