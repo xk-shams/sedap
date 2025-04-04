@@ -1,16 +1,16 @@
-table {
+.table {
   width: 100%;
   border-collapse: collapse;
 }
-th,
-td {
+.th,
+.td {
   padding: 24px;
   text-align: left;
 }
-th {
+.th {
   background-color: #f2f2f2;
 }
-tr {
+.head {
   background-color: #f9f9f9;
 }
 
@@ -54,7 +54,6 @@ tr {
   height: 24px;
 }
 
-
 .bodyMoreBtn:hover {
   cursor: pointer;
   background-color: rgb(224, 224, 224);
@@ -64,8 +63,6 @@ tr {
   background-color: white;
 }
 
-
-
 .end {
   font-weight: 500;
   font-size: 18px;
@@ -73,4 +70,3 @@ tr {
   color: #464255;
   margin-top: 60px;
 }
-

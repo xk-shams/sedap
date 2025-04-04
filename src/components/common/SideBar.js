@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "@/styles/SideBar.css";
+import "@/styles/SideBar.module.css";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -16,70 +16,70 @@ function Sidebar(props) {
       />
       <p className="side-bar-p">Modern Admin Dashboard</p>
       <ul className="side-bar-ul">
-        <li className="side-bar-li" >
-        <Link href="/orders" className="menu-link">
-          <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-          Dashboard
+        <li className="side-bar-li">
+          <Link href="/orders" className="menu-link" passHref>
+            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
+            Dashboard
           </Link>
         </li>
         <li className="side-bar-li">
-        <Link href="/" className="menu-link">
-          <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-          Order Detail
+          <Link href="/" className="menu-link">
+            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
+            Order Detail
           </Link>
         </li>
         <li className="side-bar-li">
-        <Link href="wallet" className="menu-link">
-          <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-          Customer
+          <Link href="wallet" className="menu-link">
+            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
+            Customer
           </Link>
         </li>
         <li className="side-bar-li">
-        <Link href="#" className="menu-link">
-          <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-          Analytics
+          <Link href="#" className="menu-link">
+            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
+            Analytics
           </Link>
         </li>
         <li className="side-bar-li">
-        <Link href="#" className="menu-link">
-          <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-          Reviews
+          <Link href="#" className="menu-link">
+            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
+            Reviews
           </Link>
         </li>
         <li className="side-bar-li">
-        <Link href="#" className="menu-link">
-          <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-          Foods
+          <Link href="#" className="menu-link">
+            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
+            Foods
           </Link>
         </li>
         <li className="side-bar-li">
-        <Link href="/orders" className="menu-link">
-          <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-          Food Detail
+          <Link href="/orders" className="menu-link">
+            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
+            Food Detail
           </Link>
         </li>
         <li className="side-bar-li">
-        <Link href="#" className="menu-link">
-          <Image src="/dashboardIcon.png" width={20} height={20} />
-          Customer Detail
+          <Link href="#" className="menu-link">
+            <Image src="/dashboardIcon.png" width={20} height={20} alt="gg" />
+            Customer Detail
           </Link>
         </li>
         <li className="side-bar-li">
-        <Link href="#" className="menu-link">
-          <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-          Calendar
+          <Link href="#" className="menu-link">
+            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
+            Calendar
           </Link>
         </li>
         <li className="side-bar-li">
-        <Link href="#" className="menu-link">
-          <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-          Chat
+          <Link href="#" className="menu-link">
+            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
+            Chat
           </Link>
         </li>
         <li className="side-bar-li">
-        <Link href="#" className="menu-link">
-          <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
-          Wallet
+          <Link href="#" className="menu-link">
+            <Image src="/dashboardIcon.png" width={20} height={20} alt="icon" />
+            Wallet
           </Link>
         </li>
       </ul>
