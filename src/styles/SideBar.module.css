@@ -1,6 +1,12 @@
 .sideBarLogo {
   margin-bottom: 30px;
 }
+
+.sidebarContainer {
+  background-color: white;
+  padding: 60px 50px;
+  margin-right: 60px;
+}
 .sideBarP {
   color: #b9bbbd;
   font-weight: 500;

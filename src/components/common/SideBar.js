@@ -19,7 +19,7 @@ const userData = [
   {
     id: 3,
     name: "Order Detail",
-    link: "/wallet",
+    link: "/order-detail",
     image: "/icon2.png",
   },
 ];
